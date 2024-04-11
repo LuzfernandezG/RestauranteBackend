@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.get("/", (req,res)=> res.sendFile(__dirname +"/pages/login.html"));
 app.get("/register", (req,res)=> res.sendFile(__dirname +"/pages/register.html"));
 app.get("/admin",(req,res)=> res.sendFile(__dirname +"/pages/admin/admin.html"));
-app.post("/api/register1",autenthication.register);
+app.post("/api/register",autenthication.register);
 app.post("/api/login",autenthication.login);
 // Ruta para cerrar sesión
 app.get("/logout", (res) => {
